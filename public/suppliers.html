@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja um Fornecedor - E-Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-shopping-bag text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold text-gray-800">E-Shop</span>
+                    </a>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="/products.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Produtos</a>
+                        <a href="/categories.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Categorias</a>
+                        <a href="/wholesale.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Atacado</a>
+                        <a href="/suppliers.html" class="text-indigo-600 hover:text-indigo-900 px-3 py-2 rounded-md text-sm font-medium">Fornecedores</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="/supplier-login.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Login Fornecedor</a>
+                    <a href="#register-form" class="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Começar a Vender
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-indigo-800">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Suppliers">
+            <div class="absolute inset-0 bg-indigo-800 mix-blend-multiply"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Venda na maior plataforma B2B do Brasil</h1>
+            <p class="mt-6 text-xl text-indigo-100 max-w-3xl">Alcance milhões de compradores profissionais, gerencie seu negócio e expanda suas vendas globalmente.</p>
+            <div class="mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <div class="text-4xl font-bold text-white">2M+</div>
+                        <div class="mt-2 text-indigo-100">Compradores Ativos</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <div class="text-4xl font-bold text-white">150+</div>
+                        <div class="mt-2 text-indigo-100">Países Atendidos</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <div class="text-4xl font-bold text-white">R$500M+</div>
+                        <div class="mt-2 text-indigo-100">Em Transações/Mês</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Benefícios</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Por que vender na E-Shop?
+                </p>
+            </div>
+
+            <div class="mt-16">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Benefit 1 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                <i class="fas fa-globe text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Alcance Global</h3>
+                        </div>
+                        <p class="mt-4 text-base text-gray-500">
+                            Acesse compradores em mais de 150 países e expanda seu negócio internacionalmente.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                <i class="fas fa-tools text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Ferramentas de Gestão</h3>
+                        </div>
+                        <p class="mt-4 text-base text-gray-500">
+                            Dashboard completo para gerenciar pedidos, estoque e relacionamento com clientes.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                <i class="fas fa-shield-alt text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Proteção ao Vendedor</h3>
+                        </div>
+                        <p class="mt-4 text-base text-gray-500">
+                            Garantias de pagamento e suporte jurídico para suas transações.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it Works -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Processo</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Como começar a vender
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Steps Connection Line -->
+                <div class="hidden md:block absolute w-1 bg-indigo-200 h-full left-1/2 transform -translate-x-1/2"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 mb-8 md:flex items-center">
+                    <div class="md:w-1/2 md:pr-8 text-right">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">1. Cadastre sua empresa</h3>
+                            <p class="mt-2 text-gray-500">Preencha o formulário com os dados da sua empresa e documentação necessária.</p>
+                        </div>
+                    </div>
+                    <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white">
+                        1
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 mb-8 md:flex items-center">
+                    <div class="md:w-1/2"></div>
+                    <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white">
+                        2
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">2. Verificação e Aprovação</h3>
+                            <p class="mt-2 text-gray-500">Nossa equipe verificará suas informações e aprovará seu cadastro em até 48h.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 mb-8 md:flex items-center">
+                    <div class="md:w-1/2 md:pr-8 text-right">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">3. Configure sua Loja</h3>
+                            <p class="mt-2 text-gray-500">Cadastre seus produtos, configure preços e políticas de venda.</p>
+                        </div>
+                    </div>
+                    <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white">
+                        3
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 md:flex items-center">
+                    <div class="md:w-1/2"></div>
+                    <div class="mx-auto md:mx-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white">
+                        4
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">4. Comece a Vender</h3>
+                            <p class="mt-2 text-gray-500">Receba pedidos e gerencie suas vendas através do nosso painel administrativo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div id="register-form" class="bg-white py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Cadastre sua Empresa</h2>
+                <p class="mt-4 text-lg text-gray-500">Preencha o formulário abaixo para começar a vender na E-Shop</p>
+            </div>
+
+            <form class="space-y-8">
+                <div class="space-y-6">
+                    <!-- Company Information -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Informações da Empresa</h3>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="company-name" class="block text-sm font-medium text-gray-700">Nome da Empresa</label>
+                                <input type="text" id="company-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="cnpj" class="block text-sm font-medium text-gray-700">CNPJ</label>
+                                <input type="text" id="cnpj" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="company-address" class="block text-sm font-medium text-gray-700">Endereço</label>
+                                <input type="text" id="company-address" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Informações de Contato</h3>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-gray-700">Nome do Responsável</label>
+                                <input type="text" id="contact-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-position" class="block text-sm font-medium text-gray-700">Cargo</label>
+                                <input type="text" id="contact-position" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-medium text-gray-700">E-mail Comercial</label>
+                                <input type="email" id="contact-email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-medium text-gray-700">Telefone</label>
+                                <input type="tel" id="contact-phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Information -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Informações do Negócio</h3>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div class="sm:col-span-2">
+                                <label for="business-category" class="block text-sm font-medium text-gray-700">Categoria Principal</label>
+                                <select id="business-category" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                    <option>Selecione uma categoria</option>
+                                    <option>Eletrônicos</option>
+                                    <option>Moda</option>
+                                    <option>Casa & Decoração</option>
+                                    <option>Esportes</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="business-description" class="block text-sm font-medium text-gray-700">Descrição do Negócio</label>
+                                <textarea id="business-description" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="terms" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="terms" class="font-medium text-gray-700">Concordo com os Termos de Serviço</label>
+                            <p class="text-gray-500">Ao marcar esta caixa, você concorda com nossos <a href="#" class="text-indigo-600 hover:text-indigo-500">termos de serviço</a> e <a href="#" class="text-indigo-600 hover:text-indigo-500">política de privacidade</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Enviar Cadastro
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                Soluções
+                            </h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Venda no Atacado
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Logística
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Marketing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Analytics
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                Suporte
+                            </h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Central de Ajuda
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Documentação
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        Guias
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-300 hover:text-white">
+                                        API
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 xl:mt-0">
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                        Fale Conosco
+                    </h3>
+                    <p class="mt-4 text-base text-gray-300">
+                        Entre em contato com nossa equipe de suporte para tirar suas dúvidas.
+                    </p>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        Política de Privacidade
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        Termos de Uso
+                    </a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2024 E-Shop. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
