@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Empresarial - E-Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/darkmode.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-shopping-bag text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold text-gray-800 dark:text-white">E-Shop</span>
+                    </a>
+                    <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <i class="fas fa-moon dark:text-white"></i>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- User Profile -->
+                    <div class="relative">
+                        <button id="userMenuButton" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                            <i class="fas fa-user-circle text-2xl"></i>
+                            <span class="hidden md:inline-block text-sm font-medium" id="userName">Carregando...</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Logout Button -->
+                    <button onclick="handleLogout()" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fas fa-sign-out-alt text-xl"></i>
+                    </button>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="/business-dashboard.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                        <a href="/business-management.html" class="text-indigo-600 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium">Gestão</a>
+                        <a href="/business-compliance.html" class="text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Compliance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Management Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 animate-on-scroll">
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white p-6 rounded-lg shadow transition-colors duration-200">
+                <i class="fas fa-plus text-2xl mb-2"></i>
+                <p class="text-sm font-medium">Adicionar Produto</p>
+            </button>
+            <button class="bg-green-600 hover:bg-green-700 text-white p-6 rounded-lg shadow transition-colors duration-200">
+                <i class="fas fa-box text-2xl mb-2"></i>
+                <p class="text-sm font-medium">Gerenciar Estoque</p>
+            </button>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-lg shadow transition-colors duration-200">
+                <i class="fas fa-tag text-2xl mb-2"></i>
+                <p class="text-sm font-medium">Criar Promoção</p>
+            </button>
+            <button class="bg-purple-600 hover:bg-purple-700 text-white p-6 rounded-lg shadow transition-colors duration-200">
+                <i class="fas fa-users text-2xl mb-2"></i>
+                <p class="text-sm font-medium">Gerenciar Equipe</p>
+            </button>
+        </div>
+
+        <!-- Inventory Management -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow mb-8 animate-on-scroll">
+            <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Gestão de Estoque</h3>
+            </div>
+            <div class="p-6">
+                <div class="flex mb-4">
+                    <input type="text" placeholder="Buscar produtos..." class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-l-md focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white">
+                    <button class="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 transition-colors duration-200">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Produto</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">SKU</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Estoque</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Preço</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="h-10 w-10 flex-shrink-0">
+                                            <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg" alt="">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900 dark:text-white">iPhone 13 Pro</div>
+                                            <div class="text-sm text-gray-500 dark:text-gray-400">Eletrônicos</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">IP13-PRO-128</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">24</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">R$ 7.999,00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
+                                        Em Estoque
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300 mr-3">Editar</button>
+                                    <button class="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="h-10 w-10 flex-shrink-0">
+                                            <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg" alt="">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900 dark:text-white">MacBook Pro</div>
+                                            <div class="text-sm text-gray-500 dark:text-gray-400">Eletrônicos</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">MBP-M1-256</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">12</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">R$ 12.999,00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200">
+                                        Baixo Estoque
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300 mr-3">Editar</button>
+                                    <button class="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300">Excluir</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Management -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow animate-on-scroll">
+            <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Equipe</h3>
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <div class="flex items-center">
+                            <img class="h-12 w-12 rounded-full" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="">
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900 dark:text-white">João Silva</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Gerente de Vendas</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-end">
+                            <button class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300 text-sm">Gerenciar Acesso</button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <div class="flex items-center">
+                            <img class="h-12 w-12 rounded-full" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="">
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900 dark:text-white">Maria Santos</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Analista de Marketing</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-end">
+                            <button class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300 text-sm">Gerenciar Acesso</button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <div class="flex items-center">
+                            <img class="h-12 w-12 rounded-full" src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="">
+                            <div class="ml-4">
+                                <div class="text-sm font-medium text-gray-900 dark:text-white">Pedro Oliveira</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Suporte ao Cliente</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-end">
+                            <button class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300 text-sm">Gerenciar Acesso</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/auth.js"></script>
+    <script src="/assets/js/route-guard.js"></script>
+    <script>
+        // Update user name on load
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const token = getToken();
+                if (!token) return;
+
+                const response = await fetch(`${API_URL}/auth/me`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    const user = await response.json();
+                    document.getElementById('userName').textContent = user.name;
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        });
+
+        // Add event listeners for quick action buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const action = this.querySelector('p')?.textContent;
+                if (!action) return;
+
+                switch(action) {
+                    case 'Adicionar Produto':
+                        // TODO: Implement add product functionality
+                        alert('Funcionalidade de adicionar produto será implementada em breve');
+                        break;
+                    case 'Gerenciar Estoque':
+                        // TODO: Implement inventory management
+                        alert('Funcionalidade de gerenciar estoque será implementada em breve');
+                        break;
+                    case 'Criar Promoção':
+                        // TODO: Implement promotion creation
+                        alert('Funcionalidade de criar promoção será implementada em breve');
+                        break;
+                    case 'Gerenciar Equipe':
+                        // TODO: Implement team management
+                        alert('Funcionalidade de gerenciar equipe será implementada em breve');
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
