@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - E-Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-shopping-bag text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold text-gray-800">E-Shop</span>
+                    </a>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="/products.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Produtos</a>
+                        <a href="/categories.html" class="text-indigo-600 hover:text-indigo-900 px-3 py-2 rounded-md text-sm font-medium">Categorias</a>
+                        <a href="/offers.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Ofertas</a>
+                        <a href="/wholesale.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Atacado</a>
+                        <a href="/suppliers.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Fornecedores</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="relative">
+                            <input type="text" placeholder="Buscar produtos..." class="w-64 px-4 py-1 pr-8 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex items-center">
+                        <a href="/cart.html" class="relative p-2 text-gray-500 hover:text-gray-900">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-indigo-600 rounded-full">3</span>
+                        </a>
+                        <a href="/login.html" class="ml-4 text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Entrar</a>
+                        <a href="/register.html" class="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Categories Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">Todas as Categorias</h1>
+
+        <!-- Featured Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Electronics Category -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg" alt="Electronics" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <h2 class="absolute bottom-4 left-4 text-xl font-bold text-white">Eletrônicos</h2>
+                </div>
+                <div class="p-4">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Smartphones</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Laptops</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Tablets</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Acessórios</a></li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                        Ver mais
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fashion Category -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg" alt="Fashion" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <h2 class="absolute bottom-4 left-4 text-xl font-bold text-white">Moda</h2>
+                </div>
+                <div class="p-4">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Roupas Masculinas</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Roupas Femininas</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Calçados</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Acessórios</a></li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                        Ver mais
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Home & Garden Category -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg" alt="Home" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <h2 class="absolute bottom-4 left-4 text-xl font-bold text-white">Casa & Jardim</h2>
+                </div>
+                <div class="p-4">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Móveis</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Decoração</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Jardim</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Utensílios</a></li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                        Ver mais
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Categories List -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Category Column 1 -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Eletrônicos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Smartphones</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Laptops</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Tablets</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Câmeras</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Áudio</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Acessórios</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">TVs</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Videogames</a></li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-900 mt-8 mb-4">Automotivo</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Peças</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Acessórios</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Ferramentas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Som Automotivo</a></li>
+                </ul>
+            </div>
+
+            <!-- Category Column 2 -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Moda</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Roupas Masculinas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Roupas Femininas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Calçados</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Bolsas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Relógios</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Joias</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Acessórios</a></li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-900 mt-8 mb-4">Esportes</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Fitness</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Camping</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Bicicletas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Equipamentos</a></li>
+                </ul>
+            </div>
+
+            <!-- Category Column 3 -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Casa & Jardim</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Móveis</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Decoração</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Iluminação</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Jardim</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Utensílios</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Ferramentas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Organização</a></li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-900 mt-8 mb-4">Brinquedos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Jogos</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Bonecos</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Educativos</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Bebês</a></li>
+                </ul>
+            </div>
+
+            <!-- Category Column 4 -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Beleza & Saúde</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Maquiagem</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Perfumes</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Cuidados com a Pele</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Cabelo</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Suplementos</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Vitaminas</a></li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-900 mt-8 mb-4">Indústria</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Máquinas</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Equipamentos</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Segurança</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-indigo-600">Ferramentas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Business Services -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Serviços para Empresas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Wholesale -->
+                <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-box text-2xl text-indigo-600"></i>
+                        <h3 class="text-lg font-semibold text-gray-900 ml-3">Compras no Atacado</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Preços especiais para compras em quantidade. Ideal para revendedores e lojistas.</p>
+                    <a href="/wholesale.html" class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                        Saiba mais
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Supplier Services -->
+                <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-handshake text-2xl text-indigo-600"></i>
+                        <h3 class="text-lg font-semibold text-gray-900 ml-3">Seja um Fornecedor</h3>
+                    </div>
