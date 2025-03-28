@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 13 Pro - E-Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-shopping-bag text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold text-gray-800">E-Shop</span>
+                    </a>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="/products.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Produtos</a>
+                        <a href="/categories.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Categorias</a>
+                        <a href="/offers.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Ofertas</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="/cart.html" class="relative p-2 text-gray-500 hover:text-gray-900">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-indigo-600 rounded-full">3</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:ml-4 md:flex md:items-center">
+                        <a href="/login.html" class="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Entrar</a>
+                        <a href="/register.html" class="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ol class="flex items-center space-x-2 text-sm text-gray-500">
+            <li><a href="/" class="hover:text-gray-900">Home</a></li>
+            <li><i class="fas fa-chevron-right text-xs"></i></li>
+            <li><a href="/products.html" class="hover:text-gray-900">Produtos</a></li>
+            <li><i class="fas fa-chevron-right text-xs"></i></li>
+            <li><a href="#" class="hover:text-gray-900">Eletrônicos</a></li>
+            <li><i class="fas fa-chevron-right text-xs"></i></li>
+            <li class="text-gray-900">iPhone 13 Pro</li>
+        </ol>
+    </nav>
+
+    <!-- Product Detail -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-x-8">
+            <!-- Product Images -->
+            <div class="lg:max-w-lg lg:self-end">
+                <div class="bg-white rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg" alt="iPhone 13 Pro" class="w-full h-full object-center object-cover">
+                </div>
+                <div class="mt-4 grid grid-cols-4 gap-4">
+                    <button class="bg-white rounded-lg overflow-hidden border-2 border-indigo-600">
+                        <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg" alt="iPhone 13 Pro" class="w-full h-full object-center object-cover">
+                    </button>
+                    <button class="bg-white rounded-lg overflow-hidden border hover:border-indigo-600">
+                        <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" alt="iPhone 13 Pro" class="w-full h-full object-center object-cover">
+                    </button>
+                    <button class="bg-white rounded-lg overflow-hidden border hover:border-indigo-600">
+                        <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg" alt="iPhone 13 Pro" class="w-full h-full object-center object-cover">
+                    </button>
+                    <button class="bg-white rounded-lg overflow-hidden border hover:border-indigo-600">
+                        <img src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg" alt="iPhone 13 Pro" class="w-full h-full object-center object-cover">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="mt-10 lg:mt-0 lg:max-w-lg lg:self-end">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900">iPhone 13 Pro</h1>
+                    <div class="mt-2 flex items-center">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-500">(128 avaliações)</span>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="mb-8">
+                    <p class="text-4xl font-bold text-gray-900">R$ 7.999,00</p>
+                    <p class="mt-2 text-sm text-gray-500">Em até 12x de R$ 666,58 sem juros</p>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="mb-8">
+                    <h3 class="text-sm font-medium text-gray-900">Cor</h3>
+                    <div class="mt-4 flex items-center space-x-3">
+                        <button class="relative w-8 h-8 rounded-full bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span class="sr-only">Grafite</span>
+                            <span class="absolute inset-0 rounded-full border-2 border-gray-200" aria-hidden="true"></span>
+                        </button>
+                        <button class="relative w-8 h-8 rounded-full bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span class="sr-only">Azul Sierra</span>
+                        </button>
+                        <button class="relative w-8 h-8 rounded-full bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span class="sr-only">Dourado</span>
+                        </button>
+                        <button class="relative w-8 h-8 rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span class="sr-only">Prata</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Storage Selection -->
+                <div class="mb-8">
+                    <h3 class="text-sm font-medium text-gray-900">Armazenamento</h3>
+                    <div class="mt-4 grid grid-cols-3 gap-4">
+                        <button class="border rounded-md py-3 px-4 text-sm font-medium text-gray-900 hover:border-indigo-600">
+                            128GB
+                        </button>
+                        <button class="border rounded-md py-3 px-4 text-sm font-medium text-gray-900 hover:border-indigo-600">
+                            256GB
+                        </button>
+                        <button class="border rounded-md py-3 px-4 text-sm font-medium text-gray-900 hover:border-indigo-600">
+                            512GB
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Add to Cart -->
+                <div class="mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center border rounded-md mr-4">
+                            <button class="px-3 py-1 text-gray-600 hover:text-gray-700">-</button>
+                            <span class="px-3 py-1 text-gray-600 border-x">1</span>
+                            <button class="px-3 py-1 text-gray-600 hover:text-gray-700">+</button>
+                        </div>
+                        <span class="text-sm text-gray-500">12 unidades em estoque</span>
+                    </div>
+                    <button class="w-full bg-indigo-600 text-white py-3 px-8 rounded-md hover:bg-indigo-700 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                    <button class="w-full mt-4 bg-gray-100 text-gray-900 py-3 px-8 rounded-md hover:bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-heart mr-2"></i>
+                        Adicionar à Lista de Desejos
+                    </button>
+                </div>
+
+                <!-- Product Description -->
+                <div class="border-t pt-8">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">Descrição do Produto</h3>
+                    <div class="prose prose-sm text-gray-500">
+                        <p>O iPhone 13 Pro traz um sistema de câmera profissional revolucionário, tela Super Retina XDR com ProMotion e bateria com duração ainda maior.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Tela Super Retina XDR de 6,1 polegadas com ProMotion</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Sistema de câmera Pro de 12MP</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Chip A15 Bionic</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>5G ultrarrápido</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Face ID para autenticação segura</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="mt-16 border-t pt-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Avaliações dos Clientes</h2>
+            
+            <!-- Review Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="flex items-center">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <span class="text-4xl font-bold text-gray-900 mr-2">4.8</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500">Baseado em 128 avaliações</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center mr-2">
+                                <span class="text-sm text-gray-500 mr-2">5</span>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-400 rounded-full" style="width: 75%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">75%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex items-center mr-2">
+                                <span class="text-sm text-gray-500 mr-2">4</span>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-400 rounded-full" style="width: 17%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">17%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex items-center mr-2">
+                                <span class="text-sm text-gray-500 mr-2">3</span>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-400 rounded-full" style="width: 5%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">5%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex items-center mr-2">
+                                <span class="text-sm text-gray-500 mr-2">2</span>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-400 rounded-full" style="width: 2%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">2%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex items-center mr-2">
+                                <span class="text-sm text-gray-500 mr-2">1</span>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-yellow-400 rounded-full" style="width: 1%"></div>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">1%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Individual Reviews -->
+            <div class="space-y-8">
+                <!-- Review 1 -->
+                <div class="border-b pb-8">
+                    <div class="flex items-center mb-4">
+                        <img class="h-12 w-12 rounded-full" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="User">
+                        <div class="ml-4">
+                            <h4 class="text-sm font-medium text-gray-900">João Silva</h4>
+                            <div class="flex items-center mt-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-2 text-sm text-gray-500">há 1 semana</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500">Excelente smartphone! A qualidade da câmera é impressionante e a duração da bateria supera as expectativas. Recomendo fortemente!</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="border-b pb-8">
+                    <div class="flex items-center mb-4">
+                        <img class="h-12 w-12 rounded-full" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="User">
+                        <div class="ml-4">
+                            <h4 class="text-sm font-medium text-gray-900">Maria Santos</h4>
+                            <div class="flex items-center mt-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="far fa-star text-yellow-400"></i>
+                                <span class="ml-2 text-sm text-gray-500">há 2 semanas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500">O iPhone 13 Pro é incrível! A tela ProMotion faz toda a diferença na experiência de uso. Apenas acho o preço um pouco salgado.</p>
+                </div>
+            </div>
+
+            <!-- Write a Review -->
+            <div class="mt-8">
+                <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                    <i class="fas fa-pencil-alt mr-2"></i>
+                    Escrever uma Avaliação
+                </button>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-16 border-t pt-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Produtos Relacionados</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Related Product 1 -->
+                <div class="group relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-t-lg overflow-hidden group-hover:opacity-75">
+                        <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg" alt="MacBook Pro" class="w-full h-full object-center object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm text-gray-700">MacBook Pro</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">R$ 12.999,00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 2 -->
+                <div class="group relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-t-lg overflow-hidden group-hover:opacity-75">
+                        <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" alt="Apple Watch" class="w-full h-full object-center object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm text-gray-700">Apple Watch</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">R$ 3.499,00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 3 -->
+                <div class="group relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-t-lg overflow-hidden group-hover:opacity-75">
+                        <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg" alt="AirPods Pro" class="w-full h-full object-center object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm text-gray-700">AirPods Pro</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">R$ 2.499,00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 4 -->
+                <div class="group relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-t-lg overflow-hidden group-hover:opacity-75">
+                        <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg" alt="iPad Pro" class="w-full h-full object-center object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm text-gray-700">iPad Pro</h3>
+                        <p class="mt-1 text-lg font-medium text-gray-900">R$ 8.999,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+            <div class="flex justify-center space-x-6 md:order-2">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-center text-base text-gray-400">
+                    &copy; 2024 E-Shop. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
