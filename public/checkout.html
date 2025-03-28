@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - E-Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-shopping-bag text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold text-gray-800">E-Shop</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Steps -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-center mb-8">
+            <div class="flex items-center">
+                <div class="flex items-center relative">
+                    <div class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 bg-indigo-600 border-indigo-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-indigo-600">Carrinho</div>
+                </div>
+                <div class="flex-auto border-t-2 transition duration-500 ease-in-out border-indigo-600"></div>
+                <div class="flex items-center relative">
+                    <div class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 bg-indigo-600 border-indigo-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-indigo-600">Endereço</div>
+                </div>
+                <div class="flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300"></div>
+                <div class="flex items-center relative">
+                    <div class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-gray-500">Pagamento</div>
+                </div>
+                <div class="flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300"></div>
+                <div class="flex items-center relative">
+                    <div class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-gray-500">Confirmação</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start xl:gap-x-16">
+            <!-- Checkout Form -->
+            <div class="lg:col-span-7">
+                <form class="space-y-8">
+                    <!-- Shipping Information -->
+                    <div class="bg-white shadow-sm rounded-lg p-6">
+                        <h2 class="text-lg font-medium text-gray-900 mb-6">Informações de Entrega</h2>
+                        <div class="grid grid-cols-6 gap-6">
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">Nome</label>
+                                <input type="text" name="first-name" id="first-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Sobrenome</label>
+                                <input type="text" name="last-name" id="last-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6">
+                                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                                <input type="email" name="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-2">
+                                <label for="cep" class="block text-sm font-medium text-gray-700">CEP</label>
+                                <input type="text" name="cep" id="cep" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-4">
+                                <label for="address" class="block text-sm font-medium text-gray-700">Endereço</label>
+                                <input type="text" name="address" id="address" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-2">
+                                <label for="number" class="block text-sm font-medium text-gray-700">Número</label>
+                                <input type="text" name="number" id="number" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-4">
+                                <label for="complement" class="block text-sm font-medium text-gray-700">Complemento</label>
+                                <input type="text" name="complement" id="complement" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="city" class="block text-sm font-medium text-gray-700">Cidade</label>
+                                <input type="text" name="city" id="city" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="state" class="block text-sm font-medium text-gray-700">Estado</label>
+                                <select id="state" name="state" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                    <option>Selecione...</option>
+                                    <option>SP</option>
+                                    <option>RJ</option>
+                                    <option>MG</option>
+                                    <!-- Add more states -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="bg-white shadow-sm rounded-lg p-6">
+                        <h2 class="text-lg font-medium text-gray-900 mb-6">Método de Pagamento</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <input id="credit-card" name="payment-method" type="radio" checked class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                                <label for="credit-card" class="ml-3">
+                                    <span class="block text-sm font-medium text-gray-700">Cartão de Crédito</span>
+                                </label>
+                            </div>
+
+                            <div class="ml-7 grid grid-cols-6 gap-6">
+                                <div class="col-span-6">
+                                    <label for="card-number" class="block text-sm font-medium text-gray-700">Número do Cartão</label>
+                                    <input type="text" name="card-number" id="card-number" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="card-name" class="block text-sm font-medium text-gray-700">Nome no Cartão</label>
+                                    <input type="text" name="card-name" id="card-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                </div>
+
+                                <div class="col-span-3 sm:col-span-1">
+                                    <label for="expiration" class="block text-sm font-medium text-gray-700">Validade</label>
+                                    <input type="text" name="expiration" id="expiration" placeholder="MM/AA" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                </div>
+
+                                <div class="col-span-3 sm:col-span-1">
+                                    <label for="cvc" class="block text-sm font-medium text-gray-700">CVC</label>
+                                    <input type="text" name="cvc" id="cvc" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center mt-4">
+                                <input id="pix" name="payment-method" type="radio" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                                <label for="pix" class="ml-3">
+                                    <span class="block text-sm font-medium text-gray-700">PIX</span>
+                                </label>
+                            </div>
+
+                            <div class="flex items-center mt-4">
+                                <input id="boleto" name="payment-method" type="radio" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                                <label for="boleto" class="ml-3">
+                                    <span class="block text-sm font-medium text-gray-700">Boleto Bancário</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="mt-10 lg:mt-0 lg:col-span-5">
+                <div class="bg-white shadow-sm rounded-lg p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-6">Resumo do Pedido</h2>
+                    
+                    <!-- Order Items -->
+                    <div class="flow-root">
+                        <ul role="list" class="-my-6 divide-y divide-gray-200">
+                            <li class="py-6 flex">
+                                <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
+                                    <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg" alt="iPhone" class="w-full h-full object-center object-cover">
+                                </div>
+                                <div class="ml-4 flex-1 flex flex-col">
+                                    <div>
+                                        <div class="flex justify-between text-base font-medium text-gray-900">
+                                            <h3>iPhone 13 Pro</h3>
+                                            <p class="ml-4">R$ 7.999,00</p>
+                                        </div>
+                                        <p class="mt-1 text-sm text-gray-500">Grafite</p>
+                                    </div>
+                                    <div class="flex-1 flex items-end justify-between text-sm">
+                                        <p class="text-gray-500">Qtd 1</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="py-6 flex">
+                                <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
+                                    <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg" alt="MacBook" class="w-full h-full object-center object-cover">
+                                </div>
+                                <div class="ml-4 flex-1 flex flex-col">
+                                    <div>
+                                        <div class="flex justify-between text-base font-medium text-gray-900">
+                                            <h3>MacBook Pro</h3>
+                                            <p class="ml-4">R$ 12.999,00</p>
+                                        </div>
+                                        <p class="mt-1 text-sm text-gray-500">Cinza Espacial</p>
+                                    </div>
+                                    <div class="flex-1 flex items-end justify-between text-sm">
+                                        <p class="text-gray-500">Qtd 1</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Order Total -->
+                    <div class="border-t border-gray-200 mt-6 pt-6">
+                        <div class="flex justify-between text-sm text-gray-600 mb-2">
+                            <p>Subtotal</p>
+                            <p>R$ 20.998,00</p>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600 mb-2">
+                            <p>Frete</p>
+                            <p>R$ 25,00</p>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600 mb-4">
+                            <p>Impostos</p>
+                            <p>Calculado no próximo passo</p>
+                        </div>
+                        <div class="flex justify-between text-base font-medium text-gray-900">
+                            <p>Total</p>
+                            <p>R$ 21.023,00</p>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Em até 12x de R$ 1.751,92</p>
+                    </div>
+
+                    <div class="mt-6">
+                        <button type="submit" class="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Finalizar Compra
+                        </button>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-sm text-gray-500 flex items-center justify-center">
+                            <i class="fas fa-lock mr-2"></i>
+                            Pagamento 100% seguro
+                        </p>
+                        <div class="flex justify-center space-x-2 mt-2">
+                            <i class="fab fa-cc-visa text-2xl text-gray-400"></i>
+                            <i class="fab fa-cc-mastercard text-2xl text-gray-400"></i>
+                            <i class="fab fa-cc-amex text-2xl text-gray-400"></i>
+                            <i class="fab fa-pix text-2xl text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+            <div class="flex justify-center space-x-6 md:order-2">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-center text-base text-gray-400">
+                    &copy; 2024 E-Shop. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
